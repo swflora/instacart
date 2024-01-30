@@ -34,7 +34,7 @@ def main():
         st.write("No matching aisle found for the selected ID.")
     
     
-    st.table(dfs)
+    st.table(df)
 
 if __name__ == "__main__":
     main()
