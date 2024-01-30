@@ -13,16 +13,21 @@ import matplotlib.pyplot as plt
 
 
 @st.cache
-def load_data():
-    df = pd.read_csv('aisles.csv')
-    return df
+def load_data1():
+    df1 = pd.read_csv('aisles.csv')
+    return df1
+    
+@st.cache
+def load_data2():
+    df2 = pd.read_csv('departments.csv')
+    return df2
 
 def page_products():
     st.title('Products')
 def page_aisles():
         
     st.title("aisles")
-    aisles = load_data()
+    aisles = load_data1()
     
     value1 = st.slider("Choose the aisle'id",1, 134)
 
@@ -38,6 +43,10 @@ def page_aisles():
 
 def page_departments():
     st.title('Departments')
+    departments = load_data2()
+
+    value2 = st.slider("Choose the departments'id", 1, 21)
+    
 
 def main():
     st.markdown("<h1 style='text-align: center; color: #623AA2;'>Instacart Market</h1>", unsafe_allow_html=True)
