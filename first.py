@@ -12,8 +12,10 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 
-aisles_df = pd.read_csv("aisles.csv")
-departments_df = pd.read_csv("departments.csv")
+@st.cache
+def load_data():
+    df = pd.read_csv('aisles.csv')
+    return df
 
 def page_products():
     st.title('Products')
