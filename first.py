@@ -20,35 +20,34 @@ def load_data():
 def page_products():
     st.title('Products')
 def page_aisles():
-    st.title('Aisles')
+        st.markdown("<h1 style='text-align: center; color: #623AA2;'>Instacart Market</h1>", unsafe_allow_html=True)
+        st.sidebar.title("Menu")
+    
+        st.title("aisles")
+        aisles = load_data()
+    
+        value1 = st.slider("Choose the aisle'id",1, 134)
+
+        selected_aisle = aisles[aisles['aisle_id'] == value1]['aisle'].values
+        st.write(f"Selected Aisle ID: {value1}")
+    
+        if selected_aisle:
+            st.write(f"Aisle Value: {selected_aisle[0]}")
+        else:
+            st.write("No matching aisle found for the selected ID.")
+
 def page_departments():
     st.title('Departments')
 
-if st.sidebar.button("Aisles"):
-def test1():
-    st.markdown("<h1 style='text-align: center; color: #623AA2;'>Instacart Market</h1>", unsafe_allow_html=True)
-    st.sidebar.title("Menu")
+def main():
     
-    st.title("aisles")
-    aisles = load_data()
-    
-    value1 = st.slider("Choose the aisle'id",1, 134)
-
-    selected_aisle = aisles[aisles['aisle_id'] == value1]['aisle'].values
-    st.write(f"Selected Aisle ID: {value1}")
-    
-    if selected_aisle:
-        st.write(f"Aisle Value: {selected_aisle[0]}")
-    else:
-        st.write("No matching aisle found for the selected ID.")
-
     if st.sidebar.button("Aisles"):
-        st.write(aisles)
+        page_aisles()
     if st.sidebar.button("Departments"):
         page_departments()
     if st.sidebar.button("Products"):
         page_products()
-    
+   
     
         
     
