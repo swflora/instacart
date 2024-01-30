@@ -23,7 +23,7 @@ def main():
     aisles = load_date()
     
     value1 = st.slider("Choose the aisle'id", 1, 134)
-    st.write(value1)
+    st.sidebar.write(value1)
     #select_aisle = aisles[aisles['aisle_id'] == value1]['aisles'].values
     #st.write(f"Selected Aisle ID: {value1}")
 
