@@ -17,8 +17,12 @@ def load_data():
     # df_products = pd.read_csv("products.csv")
     return df # df_products
 
+def page_products():
+    st.title('Products')
+
 def main():
     st.markdown("<h1 style='text-align: center; color: #623AA2;'>Instacart Market</h1>", unsafe_allow_html=True)
+    st.sidebar.title("Menu")
     
     st.title("aisles")
     aisles = load_data()
@@ -32,6 +36,9 @@ def main():
         st.write(f"Aisle Value: {selected_aisle[0]}")
     else:
         st.write("No matching aisle found for the selected ID.")
+
+    if st.sidebar.button("Products"):
+        page_products()
     
     
     st.table(aisles)
