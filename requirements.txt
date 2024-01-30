@@ -1,0 +1,19 @@
+numpy
+pandas
+matplotlib
+seaborn
+plotly
+streamlit
+
+# pip install -r requirements.txt
+
+
+
+
+
+
+
+
+
+
+
