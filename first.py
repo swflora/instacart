@@ -23,10 +23,10 @@ def load_data2():
     df2 = pd.read_csv('departments.csv')
     return df2
 
-def init_session_state():
+# def init_session_state():
     return SessionState.get(page="Home")
 
-session_state = init_session_state()
+# session_state = init_session_state()
 
 def page_products():
     st.title('Products')
