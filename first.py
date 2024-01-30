@@ -13,9 +13,9 @@ import matplotlib.pyplot as plt
 
 @st.cache
 def load_data():
-    aisles = pd.read_csv("aisles.csv")
-    products = pd.read_csv("products.csv")
-    return aisles, products
+    df_aisles = pd.read_csv("aisles.csv")
+    # df_products = pd.read_csv("products.csv")
+    return df_aisles # df_products
 
 def main():
     st.markdown("<h1 style='text-align: center; color: #623AA2;'>Instacart Market</h1>", unsafe_allow_html=True)
@@ -33,11 +33,8 @@ def main():
     else:
         st.write("No matching aisle found for the selected ID.")
     
-    st.write("Aisles Data:", aisles)
-    st.write("Products Data:", products)
-
-    st.subheader("Products Table:")
-    st.table(products)
+    
+    st.table(df_aisles)
 
 if __name__ == "__main__":
     main()
