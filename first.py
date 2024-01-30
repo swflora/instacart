@@ -42,14 +42,16 @@ def main():
     else:
         st.write("No matching aisle found for the selected ID.")
 
-    if st.sidebar.button("Products"):
-        page_products()
     if st.sidebar.button("Aisles"):
         page_aisles()
     if st.sidebar.button("Departments"):
         page_departments()
+    if st.sidebar.button("Products"):
+        page_products()
+    
+    
         
-    # st.table(aisles)
+    st.table(aisles)
 
 if __name__ == "__main__":
     main()
