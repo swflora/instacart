@@ -22,6 +22,11 @@ def load_data2():
     df2 = pd.read_csv('departments.csv')
     return df2
 
+def init_session_state():
+    return {"page": "Home"} 
+
+session_state = st.session_state.get(session_id=0, default=init_session_state())
+
 def page_products():
     st.title('Products')
 def page_aisles():
@@ -61,15 +66,22 @@ def page_departments():
 def main():
     st.markdown("<h1 style='text-align: center; color: #623AA2;'>Instacart Market</h1>", unsafe_allow_html=True)
     st.sidebar.title("Menu")
-    
-    
+
     if st.sidebar.button("Aisles"):
-        page_aisles()
+        session_state.page = "Aisles"
     if st.sidebar.button("Departments"):
-        page_departments()
+        session_state.page = "Departments"
     if st.sidebar.button("Products"):
+        session_state.page = "Products"
+        
+    if session_state.page == "Home":
+        st.write("Welcome to the Instacart Market Page")
+    elif session_state.page == "Aisles":
+        page_aisles()
+    elif session_state.page == "Departments":
+        page_departments()
+    elif session_state.page == "Products":
         page_products()
-   
     
         
     
