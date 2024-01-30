@@ -19,7 +19,7 @@ def load_data():
 def main():
     st.markdown("<h1 style='text-align: center; color: #623AA2;'>Instacart Market</h1>", unsafe_allow_html=True)
     
-    st.title("Hello World on Streamlit.io")
+    st.title("aisles")
     
     aisles = load_data()
     
