@@ -22,11 +22,10 @@ def main():
     st.title("aisles")
     aisles = load_data()
     
-    st.markdown("<h2 style='color: #623AA2; font-size: 24px;'>Choose the aisle'id</h2>", unsafe_allow_html=True)
-    value1 = st.slider(1, 134)
+    value1 = st.slider("Choose the aisle'id",1, 134)
 
     selected_aisle = aisles[aisles['aisle_id'] == value1]['aisle'].values
-    st.write(f"Selected Aisle ID: {value1}")
+    st.markdown("<h2 style='color: #9708CC; font-size: 24px;'>Selected Aisle ID: {selected_value}</p>", unsafe_allow_html=True)
 
     if selected_aisle:
         st.write(f"Aisle Value: {selected_aisle[0]}")
