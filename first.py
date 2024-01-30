@@ -13,15 +13,15 @@ import matplotlib.pyplot as plt
 
 @st.cache
 def load_data():
-    df_aisles = pd.read_csv("aisles.csv")
+    df = pd.read_csv("aisles.csv")
     # df_products = pd.read_csv("products.csv")
-    return df_aisles # df_products
+    return df # df_products
 
 def main():
     st.markdown("<h1 style='text-align: center; color: #623AA2;'>Instacart Market</h1>", unsafe_allow_html=True)
     
     st.title("aisles")
-    aisles, products = load_data()
+    aisles = load_data()
     
     value1 = st.slider("Choose the aisle'id",1, 134)
 
@@ -34,7 +34,7 @@ def main():
         st.write("No matching aisle found for the selected ID.")
     
     
-    st.table(df_aisles)
+    st.table(dfs)
 
 if __name__ == "__main__":
     main()
