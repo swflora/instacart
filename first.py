@@ -33,7 +33,7 @@ def main():
     else:
         st.write("No matching aisle found for the selected ID.")
     
-    # st.table(aisles)
+    st.table(aisles)
 
     st.subheader("Products Table:")
     st.table(products)
