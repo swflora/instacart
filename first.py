@@ -22,6 +22,14 @@ def main():
     st.title("aisles")
     aisles = load_data()
 
+    value1 = st.slider("Choose the aisle'id", 1, 134)
+    st.write(value1)
+
+    selected_aisle = aisles[aisles['aisle_id'] == value1]['aisle'].values
+
+    st.write(f"Selected Aisle ID: {value1}")
+    
+
 
 
 
@@ -30,7 +38,7 @@ def main():
 
 
     
-    st.table(aisles)
+    # st.table(aisles)
 
 if __name__ == "__main__":
     main()
