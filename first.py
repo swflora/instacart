@@ -20,9 +20,7 @@ def load_data():
 def page_products():
     st.title('Products')
 def page_aisles():
-        st.markdown("<h1 style='text-align: center; color: #623AA2;'>Instacart Market</h1>", unsafe_allow_html=True)
-        st.sidebar.title("Menu")
-    
+        
         st.title("aisles")
         aisles = load_data()
     
@@ -40,6 +38,9 @@ def page_departments():
     st.title('Departments')
 
 def main():
+    st.markdown("<h1 style='text-align: center; color: #623AA2;'>Instacart Market</h1>", unsafe_allow_html=True)
+    st.sidebar.title("Menu")
+    
     
     if st.sidebar.button("Aisles"):
         page_aisles()
