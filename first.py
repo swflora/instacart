@@ -11,28 +11,28 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-@st.cache
-def load_data():
-    df = pd.read_csv("aisles.csv")
-    # df_products = pd.read_csv("products.csv")
-    return df # df_products
+
+aisles_df = pd.read_csv("aisles.csv")
+departments_df = pd.read_csv("departments.csv")
 
 def page_products():
     st.title('Products')
 def page_aisles():
         
-        st.title("aisles")
-        aisles = load_data()
+    st.title("aisles")
+    aisles = load_data()
     
-        value1 = st.slider("Choose the aisle'id",1, 134)
+    value1 = st.slider("Choose the aisle'id",1, 134)
 
-        selected_aisle = aisles[aisles['aisle_id'] == value1]['aisle'].values
-        st.write(f"Selected Aisle ID: {value1}")
+    selected_aisle = aisles[aisles['aisle_id'] == value1]['aisle'].values
+    st.write(f"Selected Aisle ID: {value1}")
     
-        if selected_aisle:
-            st.write(f"Aisle Value: {selected_aisle[0]}")
-        else:
-            st.write("No matching aisle found for the selected ID.")
+    if selected_aisle:
+        st.write(f"Aisle Value: {selected_aisle[0]}")
+    else:
+        st.write("No matching aisle found for the selected ID.")
+        
+    st.table(aisles_df)
 
 def page_departments():
     st.title('Departments')
