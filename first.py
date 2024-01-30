@@ -23,20 +23,14 @@ def main():
     aisles = load_data()
 
     value1 = st.slider("Choose the aisle'id", 1, 134)
-    st.write(value1)
 
     selected_aisle = aisles[aisles['aisle_id'] == value1]['aisle'].values
-
     st.write(f"Selected Aisle ID: {value1}")
-    
 
-
-
-
-
-
-
-
+    if selected_aisle:
+        st.write(f"Aisle Value: {selected_aisle[0]}")
+    else:
+        st.write("No matching aisle found for the selected ID.")
     
     # st.table(aisles)
 
