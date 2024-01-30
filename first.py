@@ -34,7 +34,7 @@ def page_aisles():
     else:
         st.write("No matching aisle found for the selected ID.")
         
-    st.table(aisles_df)
+    st.table(aisles)
 
 def page_departments():
     st.title('Departments')
