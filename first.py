@@ -25,8 +25,8 @@ def main():
     value1 = st.slider("Choose the aisle'id",1, 134)
 
     selected_aisle = aisles[aisles['aisle_id'] == value1]['aisle'].values
-    st.markdown("<h2 style='color: #9708CC; font-size: 24px;'>Selected Aisle ID: {selected_value}</p>", unsafe_allow_html=True)
-
+    st.write(f"Selected Aisle ID: {value1}")
+    
     if selected_aisle:
         st.write(f"Aisle Value: {selected_aisle[0]}")
     else:
