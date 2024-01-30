@@ -20,6 +20,9 @@ def main():
     st.markdown("<h1 style='text-align: center; color: #623AA2;'>Instacart Market</h1>", unsafe_allow_html=True)
     
     st.title("aisles")
+
+    value1 = st.slider("Choose the aisle'id", 1, 134)
+    st.write(value1)
     
     aisles = load_data()
     
