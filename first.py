@@ -19,6 +19,11 @@ def load_data():
 
 def page_products():
     st.title('Products')
+def page_aisles():
+    st.title('Aisles')
+def page_departments():
+    st.title('Departments')
+
 
 def main():
     st.markdown("<h1 style='text-align: center; color: #623AA2;'>Instacart Market</h1>", unsafe_allow_html=True)
@@ -39,9 +44,12 @@ def main():
 
     if st.sidebar.button("Products"):
         page_products()
-    
-    
-    st.table(aisles)
+    if st.sidebar.button("Aisles"):
+        page_aisles()
+    if st.sidebar.button("Departments"):
+        page_departments()
+        
+    # st.table(aisles)
 
 if __name__ == "__main__":
     main()
