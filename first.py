@@ -6,6 +6,7 @@
 # products.csv -> product_id, product_name, aisle_id, department_id
 
 import streamlit as st
+from streamlit.session_state import SessionState
 import plotly.graph_objects as go
 import pandas as pd
 import seaborn as sns
@@ -23,9 +24,9 @@ def load_data2():
     return df2
 
 def init_session_state():
-    return {"page": "Home"} 
+    return SessionState.get(page="Home")
 
-session_state = st.session_state.get(session_id=0, default=init_session_state())
+session_state = init_session_state()
 
 def page_products():
     st.title('Products')
