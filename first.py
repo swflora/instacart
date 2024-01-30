@@ -27,10 +27,10 @@ def main():
     select_aisle = aisles[aisles['aisle_id'] == value1]['aisles'].values
     st.write(f"Selected Aisle ID: {value1}")
 
-   if selected_aisle:
-        st.write(f"Aisle Value: {selected_aisle[0]}")
-    else:
-        st.write("No matching aisle found for the selected ID.") 
+   #if selected_aisle:
+        #st.write(f"Aisle Value: {selected_aisle[0]}")
+    #else:
+       # st.write("No matching aisle found for the selected ID.") 
    
     
     st.table(aisles)
