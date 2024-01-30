@@ -6,7 +6,7 @@
 # products.csv -> product_id, product_name, aisle_id, department_id
 
 import streamlit as st
-from streamlit.session_state import SessionState
+# from streamlit.session_state import SessionState
 import plotly.graph_objects as go
 import pandas as pd
 import seaborn as sns
