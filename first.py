@@ -66,7 +66,7 @@ def page_departments():
 
 def main():
     st.markdown("<h1 style='text-align: center; color: #623AA2;'>Instacart Market</h1>", unsafe_allow_html=True)
-    # st.write("Welcome to the Instacart Market page.")
+    st.write("Welcome to the Instacart Market page.")
     st.sidebar.title("Menu")
 
     # if st.sidebar.button("Aisles"):
@@ -77,7 +77,7 @@ def main():
         # session_state.page = "Products"
         
     # if session_state.page == "Home":
-        st.write("Welcome to the Instacart Market Page")
+        # st.write("Welcome to the Instacart Market Page")
     if st.sidebar.button("Aisles"):
         page_aisles()
     if st.sidebar.button("Departments"):
