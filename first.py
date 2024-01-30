@@ -46,6 +46,16 @@ def page_departments():
     departments = load_data2()
 
     value2 = st.slider("Choose the departments'id", 1, 21)
+
+    selected_department = departments[departments['department_id'] == value2]['department'].values
+    st.write(f"Selected Department ID : {value2}")
+
+    if selected_department:
+        st.write(f"Department Value : {selected_department[0]}")
+    else :
+        st.write("No matching department found for the selected ID.")
+
+    st.table(departments)
     
 
 def main():
