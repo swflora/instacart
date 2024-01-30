@@ -66,23 +66,25 @@ def page_departments():
 
 def main():
     st.markdown("<h1 style='text-align: center; color: #623AA2;'>Instacart Market</h1>", unsafe_allow_html=True)
+    st. write("Welcome to the Instacart Market page.")
     st.sidebar.title("Menu")
 
-    if st.sidebar.button("Aisles"):
-        session_state.page = "Aisles"
-    if st.sidebar.button("Departments"):
-        session_state.page = "Departments"
-    if st.sidebar.button("Products"):
-        session_state.page = "Products"
+    # if st.sidebar.button("Aisles"):
+        # session_state.page = "Aisles"
+    # if st.sidebar.button("Departments"):
+        # session_state.page = "Departments"
+    # if st.sidebar.button("Products"):
+        # session_state.page = "Products"
         
-    if session_state.page == "Home":
+    # if session_state.page == "Home":
         st.write("Welcome to the Instacart Market Page")
-    elif session_state.page == "Aisles":
+    if st.sidebar.button("Aisles"):
         page_aisles()
-    elif session_state.page == "Departments":
+    if st.sidebar.button("Departments"):
         page_departments()
-    elif session_state.page == "Products":
+    if st.sidebar.button("Products"):
         page_products()
+   
     
         
     
