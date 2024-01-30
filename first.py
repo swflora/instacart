@@ -24,8 +24,8 @@ def page_aisles():
 def page_departments():
     st.title('Departments')
 
-
-def main():
+if st.sidebar.button("Aisles"):
+def test1():
     st.markdown("<h1 style='text-align: center; color: #623AA2;'>Instacart Market</h1>", unsafe_allow_html=True)
     st.sidebar.title("Menu")
     
